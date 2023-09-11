@@ -5,6 +5,7 @@ def main():
     for _ in range(num):
         meeting_list.append(tuple(map(int, input().split())))
 
+    meeting_list = sorted(meeting_list, key=lambda x: x[0])
     meeting_list = sorted(meeting_list, key=lambda x: x[1])
     tmp_tuple = meeting_list[0]
 
