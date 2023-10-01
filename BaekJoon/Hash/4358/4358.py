@@ -18,8 +18,6 @@ def main():
     # for a, b in zip(tree_list.keys(), tree_list.values()):
     #     result_list.append((a, b))
     #
-    # result_list.sort(key= lambda x: x[0])
-    #
     # for a, b in result_list:
     #     per = b/total*100
     #     print("%s, %.4f" %(a, per))
