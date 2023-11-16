@@ -18,7 +18,7 @@ def main():
                     break
         if not flag: break
 
-    result_list = sorted(result_list)
+    result_list = d(result_list)
 
 
     for i in range(len(result_list)):

@@ -1,13 +1,15 @@
 def main():
-    tmp = []
-    out_list = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-    while True:
-        input_str = input()
-        if input_str in out_list:
-            print(''.join(tmp))
-            break
-        else: tmp.append(input_str)
+    tmp = [1]
+    for i in range(1,1000000):
+        if i % 6 == 0: tmp.append(i)
 
+    a = input()
+    b = 0
+    for i, k in enumerate(tmp):
+        b += k
+        if b >= int(a):
+            print(i+1)
+            return
 
 if __name__ == '__main__':
     main()
