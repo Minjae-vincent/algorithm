@@ -11,17 +11,16 @@ def main():
         for idx, val in enumerate(num_list):
             num_queue.append((val, idx))
 
-        while num_queue:
-            tmp_max = max(num_queue)
-            if tmp_max[1] == m:
+        while True:
+            if num_queue[0][0] == max(num_queue, key=lambda x:x[0])[0]:
                 cnt += 1
-                break
-            tmp = num_queue.popleft()
-            if tmp == tmp_max: cnt += 1
+                if num_queue[0][1] == m:
+                    print(cnt)
+                    break
+                else: num_queue.popleft()
             else:
-                num_queue.append(tmp)
+                num_queue.append(num_queue.popleft())
 
-        print(cnt)
 
 
 
